@@ -3264,6 +3264,9 @@ b,strong
 	transition: .5s linear;
 	webkit-transition: .5s linear;
 }
+h1{
+	font-family: exo-example,sans-serif;
+}
 @media (max-width:1199.98px)
 {
 	.main
