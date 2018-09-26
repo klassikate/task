@@ -3152,6 +3152,7 @@ b,strong
 	transition: .5s linear;
 	webkit-transition: .5s linear;
 	width: 320px;
+	background-image: url(../img/cat-2.png);
 }
 .grid-items .content p
 {
@@ -3238,7 +3239,7 @@ b,strong
 }
 .default
 {
-	background-image: url(../img/cat-1.png);
+	background-image: url(../img/cat-1.png)!important;
 	cursor: pointer;
 	transition: 2s
 }
