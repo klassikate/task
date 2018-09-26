@@ -3327,6 +3327,15 @@ width: 41px;
 height: 41px;
 background-size:41px;    
 margin: auto 0}
+li{
+	    list-style: none;
+    padding: 20px;
+}
+.row h2{
+	    text-align: center;
+    width: 100%;
+    padding-top: 40px;
+}
 @media (max-width:1199.98px)
 {
 	.main
