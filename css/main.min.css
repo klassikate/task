@@ -3108,6 +3108,9 @@ b,strong
 {
 	font-weight: 700;
 }
+.hidden{
+	background-image: url(../img/cat-2.png);
+}
 .main
 {
 	background-image: url(../img/bg.png);
@@ -3143,6 +3146,7 @@ b,strong
 	webkit-align-items: center;
 	webkit-box-align: center;
 }
+
 .grid-items .content
 {
 	height: 480px;
@@ -3152,7 +3156,6 @@ b,strong
 	transition: .5s linear;
 	webkit-transition: .5s linear;
 	width: 320px;
-	background-image: url(../img/cat-2.png);
 }
 .grid-items .content p
 {
