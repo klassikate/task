@@ -3061,6 +3061,12 @@ html
 	background-color: orange;
 	color: #fff;
 }
+button, 
+button:active, 
+button:focus {
+    outline: none;
+    cursor: pointer;
+}
 body
 {
 	color: #000;
@@ -3111,18 +3117,27 @@ b,strong
 	max-width: 100%;
 	min-height: 700px;
 	webkit-background-size: cover;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	height: 100vh;
+	justify-items: center;
 }
 .grid
 {
 	display: grid;
 	grid-template-columns: repeat(3,1fr);
+	grid-column-gap: 80px;
+	grid-row-gap: 40px;
+}
+.grid div:nth-child(1){
+	grid-column: 1 / 4;
 }
 .grid-items
 {
 	align-items: center;
 	display: grid;
 	grid-template-columns: 1fr;
-	height: 100vh;
 	justify-items: center;
 	ms-flex-align: center;
 	webkit-align-items: center;
@@ -3142,13 +3157,6 @@ b,strong
 {
 	color: #666;
 	font-size: 16px;
-}
-.grid-items .content .active-hover
-{
-	bottom: 40px;
-	color: #e62e7a;
-	position: relative;
-	visibility: hidden;
 }
 .grid-items .content h2,.grid-items .content h3
 {
@@ -3197,14 +3205,14 @@ b,strong
 	font-size: 21px;
 	position: relative;
 }
-.grid-items .out-text-1,.grid-items .out-text-3,.grid-items .out-text-5
+ .out-text-1
 {
-	color: #fff;
-	font-size: 12px;
 	margin: 10px 0;
 	text-align: center;
+	position: absolute;
+    bottom: -60px;
 }
-.grid-items .out-text-1 button,.grid-items .out-text-3 button,.grid-items .out-text-5 button
+.out-text-1 button
 {
 	background: 0 0;
 	border-bottom: 1px dashed #50b4e5;
@@ -3215,47 +3223,48 @@ b,strong
 	font-weight: 700;
 	padding: 0;
 }
-.grid-items .out-text-2,.grid-items .out-text-4,.grid-items .out-text-6
-{
-	color: #fff;
+.out-text-2, .disabled-text{
 	display: none;
-	font-size: 12px;
-	margin: 10px 0;
-	text-align: center;
+	margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    bottom: -48px;
+    width: 300px;
+    left: 9px;
+}
+.out-text-1 p, .out-text-2 p {
+	font-size: 12px!important;
+	color: #fff!important;
 }
 .default
 {
 	background-image: url(../img/cat-1.png);
+	cursor: pointer;
+}
+.default-text{
+	height: 50px;
+}
+.default-text:before{
+	content: "Сказочное заморское яство";
 }
 .active
 {
 	background-image: url(../img/cat-2.png);
 }
-.active:hover .noactive
+.disabled
 {
-	o-transition-delay: .5s,.5s;
-	o-transition-duration: .1s,.1s;
-	o-transition-property: opacity,visibility;
-	transition-delay: .5s,.5s;
-	transition-duration: .1s,.1s;
-	transition-property: opacity,visibility;
-	visibility: hidden;
-	webkit-transition-delay: .5s,.5s;
-	webkit-transition-duration: .1s,.1s;
-	webkit-transition-property: opacity,visibility;
+	background-image: url(../img/cat-3.png);
+	color: #b3b3b3!important;
 }
-.active:hover .active-hover
-{
-	o-transition-delay: .8s,.8s;
-	o-transition-duration: .3s,.3s;
-	o-transition-property: opacity,visibility;
-	transition-delay: .8s,.8s;
-	transition-duration: .3s,.3s;
-	transition-property: opacity,visibility;
-	visibility: visible;
-	webkit-transition-delay: .8s,.8s;
-	webkit-transition-duration: .3s,.3s;
-	webkit-transition-property: opacity,visibility;
+.disabled h2, .disabled h3, .disabled .sm-t p{
+	color: #b3b3b3!important;
+}
+.disabled .weight {
+	background-color: #b3b3b3!important;
+}
+.active-h:hover .default-text:before{
+	content: "Котэ не одобряет?";
+	color: #e62e7a;
 }
 .active .weight
 {
@@ -3269,21 +3278,39 @@ h1{
 	font-size: 36px;
 	color: #fff;
 }
+.disabled-none{
+	display: none!important;
+}
+.disabled-text{
+	color: #ffff66!important;
+	display: block!important;
+	}
+.disabled-text p{
+	color: #ffff66!important;
+	font-size: 12px!important;
+	}
 @media (max-width:1199.98px)
 {
 	.main
 	{
 		height: 100%;
 	}
-	.grid
-	{
-		grid-template-columns: repeat(2,1fr);
-	}
+
 	.grid .grid-items
 	{
 		height: 100%;
 		padding: 40px 0;
 	}
+	.grid{
+		grid-template-columns: repeat(2,1fr);
+		grid-column-gap: 60px;
+		/*grid-row-gap: 20px;*/
+	}
+	.grid div:nth-child(1){
+	grid-column: 1 / 3;
+	}
+	.grid div:nth-child(4){
+	grid-column: 1 / 3;
 }
 @media (max-width:767.98px)
 {
@@ -3302,5 +3329,14 @@ h1{
 	{
 		height: 100%;
 		padding: 40px 0;
+	}
+	.grid div:nth-child(1){
+	grid-column: 1 / 2;
+	}
+	.grid div:nth-child(4){
+	grid-column: 1 / 2;
+	}
+	h1{
+		font-size: 25px;
 	}
 }

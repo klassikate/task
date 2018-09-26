@@ -6,35 +6,28 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 4</title>
-	<meta name="description" content="">
+	<title>Тестовое задание</title>
+	<meta name="description" content="Тестовое задание">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<!-- Template Basic Images End -->
-	
-	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
-
 	<link rel="stylesheet" href="css/main.min.css">
-
 </head>
 
 <body>
 	<div class="main">
-		<h1>Ты сегодня покормил кота?</h1>
 		<div class="grid">
+			<!--Header-->
+			<div class="grid-items">
+				<h1>Ты сегодня покормил кота?</h1>
+			</div>
+			<!--Cat-1-->
 			<div class="grid-items">
 				<div>
-					<div id="cat-1" class="content default">
-						<p class="noactive"> Сказочное заморское явство</p>
-						<p class="active-hover">Котэ не одобряет?</p>
+					<section class="content default">
+						<div class="default-text"></div>
 						<h2>Нямушка</h2>
 						<h3>с фуа-гра</h3>
 						<div class="sm-t">
@@ -44,20 +37,20 @@
 							<div class="l-text">0,5</div>
 							<div class="sm-text">кг</div>
 						</div>
-					</div>
-					<div class="out-text-1">
-					<p>Чего сидишь? Порадуй котэ, <button id="cat-btn-1">купи.</button></p>
-				</div>
-				<div class="out-text-2">
-					<p>Печень утки разварная с артишоками</p>
-				</div>
+						<div class="out-text-1">
+							<p>Чего сидишь? Порадуй котэ, <button>купи.</button></p>
+						</div>
+						<div class="out-text-2">
+							<p>Печень утки разварная с артишоками</p>
+						</div>
+					</section>
 				</div>
 			</div>
+			<!--Cat-2-->
 			<div class="grid-items">
 				<div>
-					<div id="cat-2" class="content default">
-						<p class="noactive"> Сказочное заморское явство</p>
-						<p class="active-hover">Котэ не одобряет?</p>
+					<section class="content default">
+						<div class="default-text"></div>
 						<h2>Нямушка</h2>
 						<h3>с рыбой</h3>
 						<div class="sm-t">
@@ -67,20 +60,20 @@
 							<div class="l-text">2</div>
 							<div class="sm-text">кг</div>
 						</div>
-					</div>
-					<div class="out-text-3">
-					<p>Чего сидишь? Порадуй котэ, <button id="cat-btn-2">купи.</button></p>
-				</div>
-				<div class="out-text-4">
-					<p>Головы щучьи с чесноком да свежайшая сёмгушка.</p>
-				</div>
+						<div class="out-text-1">
+							<p>Чего сидишь? Порадуй котэ, <button>купи.</button></p>
+						</div>
+						<div class="out-text-2">
+							<p>Головы щучьи с чесноком да свежайшая сёмгушка.</p>
+						</div>
+					</section>
 				</div>
 			</div>
+			<!--Cat-3-->
 			<div class="grid-items">
 				<div>
-					<div id="cat-3" class="content default">
-						<p class="noactive"> Сказочное заморское явство</p>
-						<p class="active-hover">Котэ не одобряет?</p>
+					<div class="content disabled">
+						<div class="default-text"></div>
 						<h2>Нямушка</h2>
 						<h3>с курой</h3>
 						<div class="sm-t">
@@ -90,19 +83,17 @@
 							<div class="l-text">5</div>
 							<div class="sm-text">кг</div>
 						</div>
+						<div class="out-text-1 disabled-none">
+						<p>Чего сидишь? Порадуй котэ, <button>купи.</button></p>
 					</div>
-					<div class="out-text-5">
-					<p>Чего сидишь? Порадуй котэ, <button id="cat-btn-3">купи.</button></p>
+					<div class="disabled-text">
+					<p>Печалька, с курой закончился.</p>
 				</div>
-				<div class="out-text-6">
-					<p>Филе из цыплят с трюфелями в бульоне.</p>
-				</div>
-				</div>
+					</div>
 			</div>
 		</div>
-	</div>	
 	</div>
-
+</div>	
 	<script src="js/scripts.min.js"></script>
 
 </body>
