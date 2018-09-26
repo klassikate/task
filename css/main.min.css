@@ -3242,7 +3242,7 @@ b,strong
 }
 .default
 {
-	background-image: url(../img/cat-1.png)!important;
+	background-image: url(../img/cat-1.png);
 	cursor: pointer;
 	transition: 2s
 }
