@@ -3314,6 +3314,9 @@ text-align:center;
 line-height:35px;}
  
 #p_prldr .svg_anm {
+color: #50b4e5;
+ font-size: 20px;
+ letter-spacing: 1px;
 position: absolute;
 width: 41px;
 height: 41px;
