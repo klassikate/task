@@ -3240,7 +3240,7 @@ b,strong
 {
 	background-image: url(../img/cat-1.png);
 	cursor: pointer;
-	transition: .5s
+	transition: 2s
 }
 .default-text{
 	height: 50px;
